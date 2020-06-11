@@ -18,6 +18,8 @@ class LoginController extends Controller
                 'message' => 'Logado com sucesso!',
                 'user' => Auth::user(),
                 'token' => $token,
+                'roles' => Auth::user()->roles,
+                'permissions' => Auth::user()->permissions,
                 'type' => 'Bearer'
             ], 200);
         }
