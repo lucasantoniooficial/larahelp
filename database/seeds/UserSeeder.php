@@ -17,6 +17,5 @@ class UserSeeder extends Seeder
             'password' => '123'
         ]);
         $user->roles()->attach(\Spatie\Permission\Models\Role::where('name', 'Admin')->first()->id);
-        $user->givePermissionTo(\Spatie\Permission\Models\Permission::where('name', 'Excluir chamado')->first());
     }
 }
